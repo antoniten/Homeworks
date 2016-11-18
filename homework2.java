@@ -1,32 +1,24 @@
 package Homeworks;
-import java.util.*;
-import java.util.Map.Entry;
+
+import java.util.Scanner;
 
 public class homework2 {
-	 public static void main(String... args){
-	        char i = 0;
-	        int count = 0;
-	        HashMap<Integer, Character> words = new LinkedHashMap<>();
-	        for(i = '\u0430'; i < '\u044f'; i++){
-	            count++;
-	            words.put(count, i);
-	        }
-	        
-	        char[] line = "культурный презентационный материал предпосылки и развитие".toCharArray();
-	        for(int j = 0; j < line.length; j++){
-	            System.out.print(line[j] + "    ");
-	        }
-	        System.out.println("");
-	        for(int k = 0; k < line.length; k++){
-	            for(Entry<Integer, Character> abc: words.entrySet()){
-	                int key = abc.getKey();
-	                char value = abc.getValue();
-	                
-	                if(line[k] == value){
-	                    System.out.print(key + "");
-	                }
-	            }
-	        }
-	    }
+	 static Scanner in = new Scanner(System.in);
+	public static void main(String[] args) {  
+	
+		       String alphabet = "абвгдеЄжзийклмнопрстуфхцчшщъыьэю€ ";  
+		        String text1 = in.nextLine() ;  
+		      for(int i =0; i< text1.length(); i++)  
+		       {
+		    	   
+		    	   for(int j =0; j< alphabet.length(); j++)  
+			       {
+		    	   if (alphabet.charAt(j) == text1.charAt(i)){
+		    		   System.out.print((j+1)+" "); 
+		    		  
+		    	   }
+		    	   }
+		       }  
+		    }  
 
 }

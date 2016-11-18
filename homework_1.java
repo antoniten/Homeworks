@@ -5,11 +5,11 @@ import java.util.Scanner;
 
 public class homework_1 {
 	 public static void main(String[] args) {
-	        System.out.print("Строка: ");
+	        System.out.print("Stroka: ");
 	        Scanner a = new Scanner(System.in);
 	        String str = a.nextLine();
 	        
-	        System.out.print("Номер символа:");
+	        System.out.print("Nomer simvola:");
 	        int k=a.nextInt();
 	        String p;
 	        String []words=str.split("[\\s\\.\\!\\,]");
